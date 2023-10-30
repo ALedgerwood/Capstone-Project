@@ -3,7 +3,7 @@
 import pandas as pd
 
 # List of CSV file paths you want to combine
-csv_files = ['BAG-229-2017.csv', 'BAG-229-2020.csv', 'BAG-229-2023.csv']
+csv_files = ['BAG-229-2017-enrollment.csv', 'BAG-229-2020-enrollment.csv', 'BAG-229-2023-enrollment.csv']
 
 # Initialize an empty DataFrame to store the combined data
 combined_data = pd.DataFrame()
@@ -14,4 +14,4 @@ for file in csv_files:
     combined_data = pd.concat([combined_data, data], ignore_index=True)
 
 # Save the combined data to a new CSV file
-combined_data.to_csv('combined_BAG_229_data.csv', index=False)
+combined_data.to_csv('combined_BAG_229_enrollment.csv', index=False)

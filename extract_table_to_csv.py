@@ -1,37 +1,30 @@
 import pdfplumber
 import pandas as pd
 
-# Replace 'input.pdf' with the path to your PDF file.
-pdf_file = "BAG-229-2014.pdf"
+# Define the PDF file path and page number containing the table
+pdf_file = "BAG-229-2017.pdf"
+page_number = 9  # Change this to the page number you want to extract the table from
 
-# Specify the page number (e.g., page 3) to extract data from.
-page_number = 3
-
-# Define bounding boxes for text extraction (adjust coordinates as needed).
-# The bounding box should encompass the area where the table is located.
-bbox = [50, 100, 550, 500]  # Example coordinates
-
-# Use pdfplumber to open the PDF file and extract text
+# Open the PDF file
 with pdfplumber.open(pdf_file) as pdf:
+    # Select the page
     page = pdf.pages[page_number - 1]  # Page numbers are 0-based
 
-    # Extract text from the specified bounding box
-    table_text = page.within_bbox(bbox).extract_text()
+    # Extract the table from the page
+    table = page.extract_table()
 
-# Split the extracted text into lines
-lines = table_text.split('\n')
+# Convert the table data to a Pandas DataFrame
+df = pd.DataFrame(table)
 
-# Extract headers and data
-headers = lines[0].split()  # Assuming headers are in the first line
+# Define the CSV file path where you want to save the data
+csv_file = "BAG-229-2017-enrollment.csv"
 
-# Extract data rows, accounting for varying row lengths
-data_rows = [line.split() for line in lines[1:] if line.strip()]
+# Save the extracted table as a CSV file
+df.to_csv(csv_file, index=False)
 
-# Create a DataFrame
-df = pd.DataFrame(data_rows, columns=headers)
+print(f"Data from page {page_number} saved as {csv_file}")
 
-# Save the DataFrame as a CSV file
-df.to_csv("BAG-229-2014_page3.csv", index=False)
+
 
 
 
