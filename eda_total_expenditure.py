@@ -40,5 +40,4 @@ y_max = 450
 y_interval = 50  # Set your desired interval
 plt.yticks(range(y_min, y_max + y_interval, y_interval))
 
-
 plt.show()
