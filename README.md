@@ -28,7 +28,7 @@ I visualized the data using line graphs using Matplotlib to spot outliers which 
 
 ### Designing and deploying a predictive model
 
-After failed attempts at ETS and Linear Regression due to the small data set, I combined the csv files to a single table. This made Linear Regression and ARIMA possible. Visualizations showed the results of ML were not very reliable, so I performed a correlation analysis which confirmed that the two variables of enrollment and expendtiure are only somewhat correlated. Using Scikitlearn, I was able to visualize a prediction of values for a future three years.
+After failed attempts at ETS and Linear Regression due to the small data set, I combined the csv files to a single table. This made Linear Regression and ARIMA possible. Visualizations showed the results of ML were not very reliable, so I performed a correlation analysis which confirmed that the two variables of enrollment and expenditure are only somewhat correlated. Using Scikitlearn, I was able to visualize a prediction of values for a future three years.
 
 ### Conclusions:
 
