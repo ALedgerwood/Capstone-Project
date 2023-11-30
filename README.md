@@ -1,7 +1,8 @@
 # Capstone-Project
 
 Analysis of USD229 budgets from 2014-2023. PDF files available here https://datacentral.ksde.org/budget.aspx
-My Ovefleaf report can be found here https://www.overleaf.com/read/cqyfrpfzcjzq#80bbd9  
+
+Overfleaf report can be found here https://www.overleaf.com/read/cqyfrpfzcjzq#80bbd9  
 
 Process Notes:
 
