@@ -5,7 +5,7 @@ My Ovefleaf report can be found here https://www.overleaf.com/read/cqyfrpfzcjzq#
 
 Process Notes:
 
-###Exploration of data sources
+### Exploration of data sources
 
 I used the Python in VS and the Camelot and PDFplumber libraries to extract tables from the budget at a glance (BAG) PDF files and save the tables as CSV files. Each PDF held three years of budget data.
 
@@ -17,7 +17,7 @@ Note that Camelot extracted table data from the first table of each pdf, but I h
 
 Later tables included the Enrollment data, which I saved as separate CSV files and combined using the same above steps.
 
-###Cleaning and wrangling the data
+### Cleaning and wrangling the data
 
 In later Predictive analysis, I realized I could combine the budget CSV file and enrollment CSV file because they covered the same years. Referencing a single file was much easier, and it made the dataset slightly larger for machine leanring test/train splits.
 
